@@ -12,7 +12,7 @@ class Postscript
 public:
 string fileName;
 Postscript (string newFileName);
-void drawrect ( int startx,  int starty,  int addx,  int addy) const ;
+void drawRect ( int startx,  int starty,  int addx,  int addy) const ;
 void fillRect ( int startx,  int starty,  int addx,  int addy) const ;
 void setFillColor (  int R,  int G,  int B) const ;
 void setStrokeColor(int r, int g, int b) const;

@@ -6,7 +6,7 @@
 Class Postscript{
 	public:
 	Postscript (string newFileName) {
-		ostream writer(newFileName);
+		ofstream writer(newFileName);
 		filename = newFileName;
 	}
 	~Postscript (){
@@ -14,11 +14,12 @@ Class Postscript{
 	};  
 	
 	void drawRect(int startx,  int starty,  int addx,  int addy) const{
+		writer.append() << startx << " " << starty << " moveto " << addx+startx << " " << addy << " " << " lineto " << addx+startx << " " << addy+starty << " lineto " << startx << " " << endy+starty << " closepath stroke\n";
 		
 	}
 	
 	void fillRect ( int startx,  int starty,  int addx,  int addy) const {
-		
+		writer.append() << startx << " " << starty << " moveto " << addx+startx << " " << addy << " " << " lineto " << addx+startx << " " << addy+starty << " lineto " << startx << " " << endy+starty << " closepath fill\n";
 	}
 	void setFillColor (  int R,  int G,  int B) const {
 		
