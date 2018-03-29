@@ -2,6 +2,8 @@
 #include <iostream>
 #pragma once
 #include <fstream>
+#pragma once
+#include <string>
 
 using namespace std;
 
