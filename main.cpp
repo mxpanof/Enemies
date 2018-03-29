@@ -1,6 +1,8 @@
 #include <Postscript.h>
+#include <Postscript.cc>
 #include <iostream>
 #include <fstream>
+#include <string>
 
 int main() {
   Postscript p("test.ps");
