@@ -1,7 +1,4 @@
-class Postscript {
-public:
-  
-};
+#include <Postscript.h>
 
 int main() {
   Postscript p("test.ps");
