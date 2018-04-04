@@ -18,8 +18,7 @@ int main() {
   p.fillTriangle(x1,y1, x2,y2, x3,y3);
   p.drawCircle(x,y,r); // x y 0 360 r arc stroke
   p.text(x,y, "testing testing 123"); // look it up  setfont  (ABC) show
-
-  p.grid(300, 50, 500, 400, 50, 700);
+  p.grid(300, 50, 500, 400, 100, 700, 350, 600 );
 
 
   

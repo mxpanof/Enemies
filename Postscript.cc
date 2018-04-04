@@ -13,9 +13,17 @@ Class Postscript{
 		writer.close();
 	};  
 	
+	void line(int startx,  int starty,  int addx,  int addy) const {
+		writer.append() << startx << " " << starty << " moveto " << addx+startx << " " << addy+starty << " closepath stroke\n";
+	}
+	
 	void drawRect(int startx,  int starty,  int addx,  int addy) const{
 		writer.append() << startx << " " << starty << " moveto " << addx+startx << " " << addy << " " << " lineto " << addx+startx << " " << addy+starty << " lineto " << startx << " " << endy+starty << " closepath stroke\n";
 		
+	}
+	
+	void setColor(int R, int G, int B){
+		writer.append() << R << " " << G << " " << B << " setrgbcolor /n";
 	}
 	
 	void fillRect ( int startx,  int starty,  int addx,  int addy) const {
@@ -35,11 +43,11 @@ Class Postscript{
 		writer.append() << trix1 << " " << triy1 << " moveto " << trix2 << " " << triy2 << " lineto " << trix3 << " " << triy3 << " closepath fill\n " ;
 	}
 	void drawCircle(int trix,int triy,int trir) const {
-		
+		writer.append() << trix << " " << triy << "  " << trir << " 0 360 arc closepath stroke \n"; 
 	}
 	void text(int trix, int triy,string phrase)const{
-		
-	}
+		writer.append() << "/Times-Roman fine font \n 32 scalefont setfont" << x << " " << y << " " << " translate 0 0 moveto (" << phrase << ") true charpath stroke \n";  
+ 	}
 	void grid(int arg1, int arg2, int arg3, int arg4, int arg4, int arg5, int arg6) const{
 		
 	}
